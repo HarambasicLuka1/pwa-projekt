@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>
+		Le_monde
+	</title>
+</head>
+<body>
+	<header class="flex_container">
+		<h1>
+			Le Monde
+		</h1>
+		<div id="navh"></div>
+		<nav>
+			<a class="nav_a" href="../index.php">
+				Home
+			</a>
+			<a class="nav_a" href="politique.php">
+				Politique
+			</a>
+			<a class="nav_a" href="sport.php">
+				Sport
+			</a>
+			<a class="nav_a" href="#">
+				Forma
+			</a>
+			<a class="nav_a" href="admin.php">
+				Admin
+			</a>
+			<a class="nav_a" href="login.php">
+				Log in
+			</a>
+		</nav>
+	</header>
+	<section class="flex_container main">
+		<article class="container">
+			<form enctype="multipart/form-data" class="flex_container" name="form" method="POST" action="../php/scrypt.php">
+				<label for="title">
+					Naslov:
+				</label>
+				<input type="text" name="title" id="title">
+				<span id="title_msg" class="error"></span>
+				<hr>
+				<label for="c_news">
+					Sažetak:
+				</label>
+				<textarea rows="5" name="c_news" id="c_news"></textarea>
+				<span id="c_news_msg" class="error"></span>
+				<hr>
+				<label for="news">
+					Vjest:
+				</label>
+				<textarea rows="20" name="news" id="news"></textarea>
+				<span id="news_msg" class="error"></span>
+				<hr>
+				<label for="news_tipe">
+					Tip vjesti:
+				</label>
+				<select name="news_type" id="news_type">
+					<option value="Politique">
+						Politique
+					</option>
+					<option value="Sport">
+						Sport
+					</option>
+				</select>
+				<hr>
+				<label for="image">
+					Slika:
+				</label>
+				<input type="file" accept="image/*" name="image" id="image">
+				<span id="image_msg" class="error"></span>
+				<hr>
+				<label for="y">
+					Javno
+				</label>
+				<input class="radio" type="radio" name="privae" value="y" id="y" checked>
+				<label for="n">
+					Privatno
+				</label>
+				<input class="radio" type="radio" name="privae" value="n" id="n">
+				<hr>
+				<input type="submit" name="submit" id="submit" value="Pošalji">
+			</form>
+		</article>
+	</section>
+	<script src="../js/validation.js"></script>
+	<footer class="flex_container">
+		<div id="foth"></div>
+		<p id="pf">
+			Suivez le monde
+		</p>
+	</footer>
+</body>
+</html>
